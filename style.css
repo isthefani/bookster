@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: "Poppins", sans-serif;
+}
   
 a {
     color: #fff;
@@ -25,7 +29,6 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
     background: rgb(47,19,109);
     height: 8vh;
 }
@@ -52,7 +55,7 @@ nav {
 
 .container figure.logo img {
     position: relative;
-    top: 28px;
+    top: 60px;
     left: 130px;
     width: 490px;
 }
@@ -79,6 +82,103 @@ nav {
     background: #fff;
     margin: 8px;
     transition: 0.3s;
+}
+
+#line1 {
+    color: rgb(157, 90, 196);
+    font-size: 40px;
+    position: absolute;
+    top: 240px;
+    left: 130px;
+}
+
+#line2 {
+    color: rgb(214, 214, 214);
+    font-size: 40px;
+    position: absolute;
+    top: 290px;
+    left: 130px;
+}
+
+#line3 {
+    color: rgb(189, 123, 219);
+    font-size: 40px;
+    position: absolute;
+    top: 340px;
+    left: 130px;
+}
+
+#line4 {
+    color: rgb(214, 214, 214);
+    font-size: 40px;
+    position: absolute;
+    top: 390px;
+    left: 130px;
+}
+
+form {
+    position: absolute;
+    top: 230px;
+    right: 130px;
+    display: flex;
+    flex-direction: column;
+    width: 24vw;
+}
+
+form [type="submit"] {
+    height: 50px;
+    width: 50%;
+    background-color: rgb(132, 14, 201);
+    color: white;
+    font-weight: bold;
+}
+
+form [type="submit"]:hover {
+    cursor: pointer;
+}
+
+input {
+    color: #fff;
+    margin-top: 20px;
+    height: 20px;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+}
+
+.login input[type="text"], input[type="email"], input[type="password"] {
+    background: rgb(139, 110, 177, 0.8);
+    outline: none;
+    font-size: 15px;
+}
+
+.login input::placeholder {
+    color: rgb(255, 255, 255, 0.5);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.login input[type="submit"] {
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(139, 110, 177, 0.8);
+    border-radius: 20px;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    transition: 0.2s;
+    align-items: center;
+    justify-content: center;
+}
+
+.login input[type="submit"]:hover {
+    cursor: pointer;
+    color: #fff;
+    background: rgb(95, 8, 167);
+    opacity: 10;
+    transition: 0.4s;
 }
 
 @media (max-width: 999px) {
@@ -110,7 +210,7 @@ nav {
         margin-left: 0;
         opacity: 0;
     }
-    
+
     .mobile-menu {
         display: block;
         position: relative;
