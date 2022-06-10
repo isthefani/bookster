@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(47,19,109);
+    height: 8vh;
+}
+
+#entrar {
+    background: transparent;
+    border-radius: 30px;
+    padding: 10px;
+    font-weight: 500;
+}
+
+#entrar:hover {
+    color: #fff;
+    background: rgb(95, 8, 167);
+    opacity: 10;
+}
+
+.container figure.logo {
+    background: url("background.jpg") no-repeat center center;
+    position: relative;
+    background-size: cover;
+    height: 92vh;
+}
+
+.container figure.logo img {
+    position: relative;
+    top: 28px;
+    left: 130px;
+    width: 490px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    font-weight: 300;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    #logo-bookster {
+        width: 30vw;
+        position: relative;
+        top: 5px;
+    }
+    
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 25vw;
+        height: 92vh;
+        background: linear-gradient(to bottom, rgb(47,19,109), rgb(111, 41, 158));
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    
+    .mobile-menu {
+        display: block;
+        position: relative;
+        left: 50px;
+    }
+}
+    
+.nav-list.active {
+transform: translateX(0);
+}
+    
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+transform: rotate(45deg) translate(-5px, -7px);
+}
